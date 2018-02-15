@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Students</title>
+</head>
+<body>
+
+    <h1>Student List</h1>
+
+    <ol>
+        <repeat group="{{ @students }}" value="{{ @student }}">
+            <li>{{ @student['last'] }}, {{ @student['first'] }}</li>
+            <li>{{ @student['last'] . ", " . @student['first'] }}</li>
+            {{ @SESSION['student']->getName() }}
+        </repeat>
+    </ol>
+</body>
+</html>
